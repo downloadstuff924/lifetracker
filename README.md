@@ -103,7 +103,7 @@ The app uses Next.js static export. Its production artifact is `out/`; all authe
 
 ### Vercel
 
-Import the repository into Vercel. Set all required `NEXT_PUBLIC_FIREBASE_*` variables from `.env.example` in the project environment settings. Use the Next.js framework preset and `npm run build`; if an output directory is requested, use `out`. Deploy, then add the resulting hostname in Firebase Authentication authorized domains. Publish the Firebase rules separately before using production data.
+Import the repository into Vercel. Set all required `NEXT_PUBLIC_FIREBASE_*` variables from `.env.example` in the project environment settings. The included `vercel.json` explicitly selects the Next.js framework, runs `npm run build`, and serves `out`, overriding any earlier empty-project build settings. Keep the Root Directory at the repository root. Deploy, then add the resulting hostname in Firebase Authentication authorized domains. Publish the Firebase rules separately before using production data.
 
 ### Firebase Hosting
 
